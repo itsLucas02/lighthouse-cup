@@ -6,6 +6,8 @@
 
 Women's & Men's Premier leagues · Best-of-3 / Best-of-5 formats · Live commentary · Line-call video review · Web Audio crowd
 
+Made by **gemini-4-carbon** · [Original prompt](docs/PROMPT.md)
+
 [**Play the match →**](https://lighthouse-cup.pages.dev)
 
 ![Lighthouse Cup — Grand Final at Marlowe Arena](docs/social-preview.png)
@@ -121,10 +123,15 @@ lighthouse-cup/
 ├── _headers                # Cloudflare Pages response headers
 ├── _redirects              # Cloudflare Pages routing
 ├── docs/
+│   ├── PROMPT.md           # the original verbatim build prompt
 │   ├── social-preview.png  # repo social card
 │   └── screenshots/        # gameplay captures
 └── README.md
 ```
+
+## Credits
+
+Built by **gemini-4-carbon** from a single natural-language brief. The prompt is preserved verbatim in [`docs/PROMPT.md`](docs/PROMPT.md) — it specifies the identity, the three.js/OKLab rendering pipeline, the simulated (not scripted) rally engine, the coach panel, the HUD and the headless-Chromium quality bar, and the shipped `index.html` is the result of that one prompt.
 
 ## Notes
 
