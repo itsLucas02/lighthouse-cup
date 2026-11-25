@@ -99,17 +99,19 @@ Or just open `index.html` directly in a browser.
 
 ## Deploying to Cloudflare Pages
 
-This repo is a static site with no build step.
+Live at **https://lighthouse-cup.pages.dev** — a static site with no build step.
 
-**Via dashboard:** Workers & Pages → Create → Pages → Connect to Git → pick `itsLucas02/lighthouse-cup` → framework preset **None** → build command empty → output directory `/`.
-
-**Via Wrangler:**
+Deploys are manual, from the repo root. The project is already created, so this publishes a new production deployment:
 
 ```bash
 npx wrangler pages deploy . --project-name lighthouse-cup
 ```
 
-The included `_headers` and `_redirects` files give the page sane caching, security headers and a clean root URL.
+`wrangler login` must include the `pages:write` scope, or set a `CLOUDFLARE_API_TOKEN` with Pages edit permission.
+
+The included `_headers` and `_redirects` files give the page caching, security headers and a `/match` alias for the game.
+
+To switch to automatic deploys later, connect the repo under Workers & Pages → `lighthouse-cup` → Settings → Build, with framework preset **None**, empty build command and output directory `/`.
 
 ## Project structure
 
